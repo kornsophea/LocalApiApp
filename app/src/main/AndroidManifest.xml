@@ -3,6 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.localapiapp">
 
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,9 +17,43 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LocalApiApp"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Node.UserListDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".security.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Laravel.LaravelActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Audio.AudioDisplayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Speech.OfflineSpeechActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Video.VideoDisplayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Speech.VoiceToTextActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Node.ImageUploadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Image.ImageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Speech.TextToSpeechActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListDataActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

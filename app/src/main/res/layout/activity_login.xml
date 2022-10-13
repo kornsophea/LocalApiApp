@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".security.LoginActivity">
     <TextView
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="70dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Local Api App"
+        android:text="@string/Login"
         android:textSize="50dp"
         android:textColor="@color/btn_color"
         android:textStyle="bold"/>
@@ -21,7 +21,7 @@
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="GET POST PUTH PATH DELETE"
+        android:text="@string/enter_your_information_account"
         android:textSize="15dp"
         android:textColor="@color/btn_color" />
     <com.google.android.material.textfield.TextInputLayout
@@ -33,9 +33,8 @@
         app:hintTextColor="@color/btn_color"
         app:helperTextTextColor="@color/red"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         app:counterEnabled="true"
-        app:counterMaxLength="20"
         app:startIconTint="@color/btn_color"
         app:startIconDrawable="@drawable/ic_baseline_email_24"
         app:boxStrokeColor="@color/btn_color"
@@ -47,7 +46,6 @@
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:inputType="textEmailAddress"
-            android:maxLength="20"
             android:lines="1"/>
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
@@ -63,7 +61,7 @@
         app:counterEnabled="true"
         app:boxStrokeColor="@color/btn_color"
         android:layout_marginTop="20dp"
-        app:counterMaxLength="20"
+        app:counterMaxLength="8"
         app:startIconTint="@color/btn_color"
         app:passwordToggleTint="@color/btn_color"
         app:startIconDrawable="@drawable/ic_baseline_vpn_key_24"
@@ -74,12 +72,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:lines="1"
-            android:maxLength="20"
+            android:maxLength="8"
             android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_get"
+        android:id="@+id/btn_login"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -87,9 +85,9 @@
         app:elevation="10dp"
         style="@style/btn"
         android:layout_marginHorizontal="20dp"
-        android:text="GET"/>
+        android:text="@string/Login"/>
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_post"
+        android:id="@+id/btn_signIn"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -97,28 +95,29 @@
         app:elevation="10dp"
         style="@style/btn"
         android:layout_marginHorizontal="20dp"
-        android:text="POST"/>
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_put"
-        android:layout_marginTop="20dp"
+        android:text="@string/sign_in"/>
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:textAllCaps="false"
-        app:elevation="10dp"
-        style="@style/btn"
-        android:layout_marginHorizontal="20dp"
-        android:text="PUT"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="20dp">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_delete"
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:textAllCaps="false"
-        app:elevation="10dp"
-        style="@style/btn"
-        android:layout_marginHorizontal="20dp"
-        android:text="DELETE"/>
+        <TextView
+            android:id="@+id/btn_register"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:textColor="@color/btn_color"
+            android:textSize="15dp" />
 
-
+        <TextView
+            android:id="@+id/btn_forgotPassword"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:gravity="right"
+            android:text="@string/forgot_password"
+            android:textColor="@color/btn_color"
+            android:textSize="15dp" />
+    </RelativeLayout>
 </LinearLayout>

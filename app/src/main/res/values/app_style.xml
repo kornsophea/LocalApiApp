@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="btn">
+        <item name="android:backgroundTint">@color/btn_color</item>
+        <item name="cornerRadius">16dp</item>
+    </style>
+</resources>
